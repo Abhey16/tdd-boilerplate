@@ -12,6 +12,8 @@ Simple starter C++ project with:
 - GoogleTest
 
 ## Authors
+### Team 2
+
 * Abhey Sharma (Navigator)
 * Navdeep Singh (Driver)
 
