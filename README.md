@@ -1,6 +1,6 @@
-# cpp-boilerplate-v2
+# tdd-boilerplate
 
-# C++ Boilerplate v2 Badges
+# Badges
 ![CICD Workflow status](https://github.com/TommyChangUMD/cpp-boilerplate-v2/actions/workflows/run-unit-test-and-upload-codecov.yml/badge.svg) [![codecov](https://codecov.io/gh/TommyChangUMD/cpp-boilerplate-v2/branch/main/graph/badge.svg)](https://codecov.io/gh/TommyChangUMD/cpp-boilerplate-v2) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 
@@ -10,6 +10,10 @@ Simple starter C++ project with:
 
 - CMake
 - GoogleTest
+
+## Authors
+* Abhey Sharma (Navigator)
+* Navdeep Singh (Driver)
 
 ## Standard install via command-line
 ```bash
