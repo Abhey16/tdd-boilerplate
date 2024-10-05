@@ -495,3 +495,18 @@ int main(void)
   return 0;
 }
 
+Performing C++ SOURCE FILE Test HAVE_fprofile_abs_path succeeded with the following output:
+Change Dir: /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dbbed/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dbbed.dir/build.make CMakeFiles/cmTC_dbbed.dir/build
+gmake[1]: Entering directory '/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dbbed.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_fprofile_abs_path  -fprofile-abs-path -std=gnu++14 -o CMakeFiles/cmTC_dbbed.dir/src.cxx.o -c /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_dbbed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbbed.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_dbbed.dir/src.cxx.o -o cmTC_dbbed 
+gmake[1]: Leaving directory '/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }

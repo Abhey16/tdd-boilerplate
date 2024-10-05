@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/_deps/googletest-src/googletest/include -I/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14
+CXX_FLAGS = -g -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14
 

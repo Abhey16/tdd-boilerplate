@@ -25,7 +25,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -43,6 +43,9 @@ CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-11
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
+
+//Flags used by the C++ compiler during coverage builds.
+CMAKE_CXX_FLAGS_COVERAGE:STRING=-g --coverage -fprofile-abs-path
 
 //Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -70,6 +73,9 @@ CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-11
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
 
+//Flags used by the C compiler during coverage builds.
+CMAKE_C_FLAGS_COVERAGE:STRING=-g --coverage -fprofile-abs-path
+
 //Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
 
@@ -88,6 +94,9 @@ CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 //Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=
 
+//Flags used for linking binaries during coverage builds.
+CMAKE_EXE_LINKER_FLAGS_COVERAGE:STRING=
+
 //Flags used by the linker during DEBUG builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
 
@@ -102,6 +111,9 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+
+//Flags used by the Fortran compiler during coverage builds.
+CMAKE_Fortran_FLAGS_COVERAGE:STRING=-g --coverage -fprofile-abs-path
 
 //User executables (bin)
 CMAKE_INSTALL_BINDIR:PATH=bin
@@ -223,6 +235,9 @@ CMAKE_READELF:FILEPATH=/usr/bin/readelf
 // during all build types.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
 
+//Flags used by the shared libraries linker during coverage builds.
+CMAKE_SHARED_LINKER_FLAGS_COVERAGE:STRING=
+
 //Flags used by the linker during the creation of shared libraries
 // during DEBUG builds.
 CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
@@ -275,11 +290,20 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Verbose information
+CODE_COVERAGE_VERBOSE:BOOL=OFF
+
+//Path to a program.
+CPPFILT_PATH:FILEPATH=/usr/bin/c++filt
+
 //Dot tool for use with Doxygen
 DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
 
 //Doxygen documentation generation tool (http://www.doxygen.org)
 DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
+
+//Path to a program.
+FASTCOV_PATH:FILEPATH=FASTCOV_PATH-NOTFOUND
 
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/_deps
@@ -301,6 +325,15 @@ FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 //Enables UPDATE_DISCONNECTED behavior just for population of googletest
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
 
+//Path to a program.
+GCOVR_PATH:FILEPATH=/usr/bin/gcovr
+
+//Path to a program.
+GCOV_PATH:FILEPATH=/usr/bin/gcov
+
+//Path to a program.
+GENHTML_PATH:FILEPATH=/usr/bin/genhtml
+
 //Use Abseil and RE2. Requires Abseil and RE2 to be separately
 // added to the build.
 GTEST_HAS_ABSL:BOOL=OFF
@@ -308,6 +341,9 @@ GTEST_HAS_ABSL:BOOL=OFF
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
+
+//Path to a program.
+LCOV_PATH:FILEPATH=/usr/bin/lcov
 
 //this option enable coverage
 WANT_COVERAGE:BOOL=ON
@@ -400,6 +436,8 @@ CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
 CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_FLAGS_COVERAGE
+CMAKE_CXX_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
 CMAKE_CXX_FLAGS_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_MINSIZEREL
@@ -416,6 +454,8 @@ CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
 CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_COVERAGE
+CMAKE_C_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
 CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
@@ -430,6 +470,8 @@ CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_COVERAGE
+CMAKE_EXE_LINKER_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
 CMAKE_EXE_LINKER_FLAGS_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_MINSIZEREL
@@ -442,6 +484,8 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
+//ADVANCED property for variable: CMAKE_Fortran_FLAGS_COVERAGE
+CMAKE_Fortran_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 //Generator instance identifier.
@@ -523,6 +567,8 @@ CMAKE_READELF-ADVANCED:INTERNAL=1
 CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.22
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_COVERAGE
+CMAKE_SHARED_LINKER_FLAGS_COVERAGE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
 CMAKE_SHARED_LINKER_FLAGS_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL
@@ -551,6 +597,7 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+COVERAGE_COMPILER_FLAGS:INTERNAL=-g --coverage
 //ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
 DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DOXYGEN_EXECUTABLE
@@ -561,6 +608,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/bin/doxygen][cfound componen
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.12()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Test HAVE_fprofile_abs_path
+HAVE_fprofile_abs_path:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 //Path to a program.

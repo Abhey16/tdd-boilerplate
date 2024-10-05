@@ -1,10 +1,10 @@
-Start testing: Oct 05 19:18 EDT
+Start testing: Oct 05 19:26 EDT
 ----------------------------------------------------------
 1/2 Testing: PIDControllerTest.TestClamping
 1/2 Test: PIDControllerTest.TestClamping
 Command: "/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/test/cpp-test" "--gtest_filter=PIDControllerTest.TestClamping" "--gtest_also_run_disabled_tests"
 Directory: /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/test
-"PIDControllerTest.TestClamping" start time: Oct 05 19:18 EDT
+"PIDControllerTest.TestClamping" start time: Oct 05 19:26 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = PIDControllerTest.TestClamping
@@ -33,7 +33,7 @@ Expected equality of these values:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"PIDControllerTest.TestClamping" end time: Oct 05 19:18 EDT
+"PIDControllerTest.TestClamping" end time: Oct 05 19:26 EDT
 "PIDControllerTest.TestClamping" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -41,7 +41,7 @@ Test Failed.
 2/2 Test: PIDControllerTest.TestCalculateOutput
 Command: "/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/test/cpp-test" "--gtest_filter=PIDControllerTest.TestCalculateOutput" "--gtest_also_run_disabled_tests"
 Directory: /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/test
-"PIDControllerTest.TestCalculateOutput" start time: Oct 05 19:18 EDT
+"PIDControllerTest.TestCalculateOutput" start time: Oct 05 19:26 EDT
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = PIDControllerTest.TestCalculateOutput
@@ -49,7 +49,7 @@ Note: Google Test filter = PIDControllerTest.TestCalculateOutput
 [----------] Global test environment set-up.
 [----------] 1 test from PIDControllerTest
 [ RUN      ] PIDControllerTest.TestCalculateOutput
-/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/test/test.cpp:64: Failure
+/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/test/test.cpp:62: Failure
 The difference between output and expected_output is 16, which exceeds 0.01, where
 output evaluates to 0,
 expected_output evaluates to 16, and
@@ -69,8 +69,8 @@ expected_output evaluates to 16, and
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"PIDControllerTest.TestCalculateOutput" end time: Oct 05 19:18 EDT
+"PIDControllerTest.TestCalculateOutput" end time: Oct 05 19:26 EDT
 "PIDControllerTest.TestCalculateOutput" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 05 19:18 EDT
+End testing: Oct 05 19:26 EDT

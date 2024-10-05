@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/libs/pid/.
 
-CXX_FLAGS = -std=gnu++14
+CXX_FLAGS =  -g --coverage -fprofile-abs-path -g -std=gnu++14
 

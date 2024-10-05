@@ -1,4 +1,6 @@
 /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/docs.dir
+/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/test_coverage.dir
+/home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/app_coverage.dir
 /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/test.dir
 /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/edit_cache.dir
 /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/CMakeFiles/rebuild_cache.dir

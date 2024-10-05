@@ -185,6 +185,32 @@ docs/fast:
 .PHONY : docs/fast
 
 #=============================================================================
+# Target rules for targets named test_coverage
+
+# Build rule for target.
+test_coverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_coverage
+.PHONY : test_coverage
+
+# fast build rule for target.
+test_coverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_coverage.dir/build.make CMakeFiles/test_coverage.dir/build
+.PHONY : test_coverage/fast
+
+#=============================================================================
+# Target rules for targets named app_coverage
+
+# Build rule for target.
+app_coverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_coverage
+.PHONY : app_coverage
+
+# fast build rule for target.
+app_coverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_coverage.dir/build.make CMakeFiles/app_coverage.dir/build
+.PHONY : app_coverage/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -288,7 +314,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... app_coverage"
 	@echo "... docs"
+	@echo "... test_coverage"
 	@echo "... cpp-test"
 	@echo "... gmock"
 	@echo "... gmock_main"
