@@ -14,11 +14,14 @@ Simple starter C++ project with:
 - GoogleTest
 
 ## Authors
-### Team 2
+### Part1 - Team 2
 
-* Abhey Sharma (Navigator)
-* Navdeep Singh (Driver)
+* Abhey Sharma - 120110306 (Navigator)
+* Navdeep Singh - 120098024 (Driver)
 
+### Part2 - Team 1
+* Rishie Raj - 120425554 (Navigator & Driver)
+   
 ## Standard install via command-line
 ```bash
 # Download the code:
