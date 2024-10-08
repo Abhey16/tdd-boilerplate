@@ -56,7 +56,6 @@ jobs:
 
       # Upload coverage result to CodeCov
       - name: Upload coverage result to CodeCov
-        if: github.event.pull_request.head.repo.full_name == github.repository
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
