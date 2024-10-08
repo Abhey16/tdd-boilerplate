@@ -85,8 +85,8 @@ class PIDImpl
  */
 PID::PID(double dt, double max, double min, double Kp, double Kd, double Ki)
 {
-    // Replace this line by setting the pimpl pointer to a new object of the 
-    // PIDImpl class and send the dt, max, min, kp, kd and ki as inputs to it.
+    // Creating new instance of the PIDImpl class with attributes initialized
+    pimpl = new PIDImpl(dt, max, min, Kp, Kd, Ki);
 }
 
 /**
@@ -102,10 +102,8 @@ PID::PID(double dt, double max, double min, double Kp, double Kd, double Ki)
 
 double PID::calculate(double setpoint, double pv)
 {
-    // Call the calculate function of the PIDImpl class through the object
-    // of that class. Pass the setpoint and pv as inputs to the function call.
-    // Replace these comments with the necessary code.
-    return 0.0;
+    // Delegate the calculation to the PIDImpl instance
+    return pimpl->calculate(setpoint, pv);
 }
 
 /**
@@ -115,7 +113,8 @@ double PID::calculate(double setpoint, double pv)
  */
 PID::~PID()
 {
-    // Delete the pimpl variable. Write the necessary code by replacing this line.
+    // Instance deletion to avoid memory leak
+    delete pimpl; 
 }
 
 /**
@@ -140,6 +139,11 @@ PIDImpl::PIDImpl(double dt, double max, double min, double Kp, double Kd, double
 {
 }
 
+PIDImpl::~PIDImpl() {
+    // No dynamic memory to clean up, so this can be empty
+}
+
+
 /**
  * @brief Calculates the PID output.
  * 
@@ -162,33 +166,33 @@ PIDImpl::PIDImpl(double dt, double max, double min, double Kp, double Kd, double
 {
 
     // Write a line of code to calculate the error by finding the
-    // difference between setpoint and pv. Use double datatype for assignment
-   
+    // Calculate error
+    double error = setpoint - pv;
 
-    // Write code for calculating the ouput for the propotional term
-    // by multiplying _kp with the error. Use double for the asignment.
+    // Proportional term
+    double Pout = _Kp * error;
 
+    // Integral term
+    _integral += error * _dt;
+    double Iout = _Ki * _integral;
 
-    // Write code for calculaing the Integral term by multiplying error
-    // with dt to account for the addition of past error and add it to the 
-    // _integral term. Then assign the output to variable Iout of datatype double 
-    // after multiplying _ki with the derivative term.
+    // Derivative term
+    double derivative = (error - _pre_error) / _dt;
+    double Dout = _Kd * derivative;
 
-    // Calculate the derivative term by substracting the _pre_error term from
-    // the error term and dividing the difference by _dt. Keep the derivative term
-    // with datatype double. Then calculate the Dout term by multiplying the 
-    // _kd with the derivative term. Again use double as the datatype.
-    
-    // Use a variable named output of type double and add the Pout, 
-    // to Iout and Dout.
-    
+    // Total output
+    double output = Pout + Iout + Dout;
 
-    // Write some code to clip the output to the _max and _min
+    // Clamp output to max/min
+    if (output > _max)
+        output = _max;
+    else if (output < _min)
+        output = _min;
 
-    // Save _pre_error to the present error for future calculations.
-    
-    // Return the output
-    // return 0.0;
+    // Save error to previous error
+    _pre_error = error;
+
+    return output;
 }
 
 #endif
