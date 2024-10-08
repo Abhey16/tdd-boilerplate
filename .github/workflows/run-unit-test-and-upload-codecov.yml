@@ -43,6 +43,10 @@ jobs:
           sudo apt update
           sudo apt install -y software-properties-common
           sudo apt install -y doxygen lcov gcovr
+
+      # Step to clean the build directory
+      - name: Clean build directory
+        run: rm -rf build/
           
       # Build, run unit test, and generate coverage report
       - name: Configure CMake flags and build exectables
