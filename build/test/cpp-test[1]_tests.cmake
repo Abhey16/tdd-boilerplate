@@ -1,5 +1,0 @@
-add_test( PIDControllerTest.TestClamping /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/test/cpp-test [==[--gtest_filter=PIDControllerTest.TestClamping]==] --gtest_also_run_disabled_tests)
-set_tests_properties( PIDControllerTest.TestClamping PROPERTIES WORKING_DIRECTORY /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test( PIDControllerTest.TestCalculateOutput /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/test/cpp-test [==[--gtest_filter=PIDControllerTest.TestCalculateOutput]==] --gtest_also_run_disabled_tests)
-set_tests_properties( PIDControllerTest.TestCalculateOutput PROPERTIES WORKING_DIRECTORY /home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/cpp-boilerplate-v2/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set( cpp-test_TESTS PIDControllerTest.TestClamping PIDControllerTest.TestCalculateOutput)

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmyPID.a CMakeFiles/myPID.dir/PIDImpl.cpp.o
-/usr/bin/ranlib libmyPID.a
