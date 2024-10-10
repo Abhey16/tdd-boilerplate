@@ -85,12 +85,10 @@ This generates a index.html page in the build/app_coverage sub-directory that ca
 ![UML class](https://github.com/user-attachments/assets/4aa4f27d-bc75-4656-a9bc-af6a5364d10d)
 
 ## clang-tidy output
-![Screenshot from 2024-10-09 19-55-41](https://github.com/userattachments/assets/99c084a0-1d0a-424d-ab3e-194a4812e6f4)
-
-
+![Screenshot from 2024-10-09 19-55-41](https://github.com/user-attachments/assets/284b7be2-2d95-494d-ae8b-86dde9b56c01)
 
 ## cpplint output
-file:///home/abhey/Desktop/Masters/Software_Dev/HW_5/sub/Screenshot%20from%202024-10-09%2020-04-52.png
+![Screenshot from 2024-10-09 20-04-52](https://github.com/user-attachments/assets/0c3270cc-c41b-4319-8bac-b1b4dcb1d98d)
 
 
 
